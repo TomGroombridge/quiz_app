@@ -7,4 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 quiz = Quiz.create(name: 'General Knowledge')
-quiz.questions.build(title: 'Who is the president of the united states?').save
+@question = quiz.questions.build(title: 'Who is the president of the united states?')
+answers = ['Donald Trump', 'Hilary Clinton', 'Barak Obama', 'George Bush']
+
+answers.each {|a| @question.answers.build(name: a) }
+
