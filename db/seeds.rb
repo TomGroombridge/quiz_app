@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+quiz = Quiz.create(name: 'General Knowledge')
+quiz.questions.build(title: 'Who is the president of the united states?').save
